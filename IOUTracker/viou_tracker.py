@@ -11,8 +11,8 @@ from lapsolver import solve_dense
 from tqdm import tqdm
 from time import time
 
-from util import iou, load_mot
-from vis_tracker import VisTracker
+from .util import iou, load_mot
+from .vis_tracker import VisTracker
 
 
 def track_viou(frames_path, detections, sigma_l, sigma_h, sigma_iou, t_min, ttl, tracker_type, keep_upper_height_ratio):
