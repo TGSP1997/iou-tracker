@@ -38,19 +38,19 @@ class VisTracker:
         self.keep_height_ratio = keep_height_ratio
 
         if tracker_type == 'BOOSTING':
-            self.vis_tracker = cv2.TrackerBoosting_create()
+            self.vis_tracker = cv2.legacy.TrackerBoosting_create()
         elif tracker_type == 'MIL':
-            self.vis_tracker = cv2.TrackerMIL_create()
+            self.vis_tracker = cv2.legacy.TrackerMIL_create()
         elif tracker_type == 'KCF':
-            self.vis_tracker = cv2.TrackerKCF_create()
+            self.vis_tracker = cv2.legacy.TrackerKCF_create()
         elif tracker_type == 'KCF2':
             self.vis_tracker = KCF.kcftracker(False, True, False, False)  # hog, fixed_window, multiscale, lab
         elif tracker_type == 'TLD':
-            self.vis_tracker = cv2.TrackerTLD_create()
+            self.vis_tracker = cv2.legacy.TrackerTLD_create()
         elif tracker_type == 'MEDIANFLOW':
-            self.vis_tracker = cv2.TrackerMedianFlow_create()
+            self.vis_tracker = cv2.legacy.TrackerMedianFlow_create()
         elif tracker_type == 'GOTURN':
-            self.vis_tracker = cv2.TrackerGOTURN_create()
+            self.vis_tracker = cv2.legacy.TrackerGOTURN_create()
         elif tracker_type == 'NONE':  # dummy tracker that does nothing but fail
             self.vis_tracker = None
             self.ok = False
